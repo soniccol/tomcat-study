@@ -1,29 +1,29 @@
-Tomcat-Research
+Tomcat-Study
 ==================
 
-Tomcat源代码学习研究(包括代码注释、文档、用于代码分析的测试用例)
+Tomcat源代碼學習研究(包括源代碼註解、文檔、用於代碼分析的測試用例)
 
 
 ## 使用的Tomcat版本
 
-保持与官方的[trunk](https://github.com/apache/tomcat)版本同步
+保持與官方[trunk](https://github.com/apache/tomcat)版本同步
 
 
-## 构建与运行环境
+## 建構與運行環境
 
 需要JDK7以及[Apache Maven](http://maven.apache.org/)
 
 
-## 生成Eclipse工程
+## 產生Eclipse Project
 
 mvn eclipse:eclipse <br><br>
 
-在eclipse中导入 <br>
+在eclipse中導入 <br>
 File->Import->General->Existing Projects into Workspace
 
 
-## 运行Tomcat
+## 啟動Tomcat
 
-在Eclipse中右击start-tomcat.launch这个文件，点Run As启动Tomcat，点Debug As可以调试Tomcat。
+在Eclipse中右鍵start-tomcat.launch這個文件，點Run As啟動Tomcat，點Debug As可以驗測Tomcat。
 
-<p>最后，打开你的浏览器，输入 http://127.0.0.1:8080/examples/ 看看例子吧。
+<p>啟動並打開你的瀏覽器，輸入 http://127.0.0.1:8080/examples/ 看看例子吧。

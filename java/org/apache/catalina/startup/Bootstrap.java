@@ -168,11 +168,11 @@ public final class Bootstrap {
     }
 
 
-    //对应catalina.properties文件中的三个属性:
+    //對應catalina.properties文件中的三個屬性:
     //common.loader
     //server.loader
     //shared.loader
-    //默认只配置了common.loader，其他两个为空
+    //默認只有配置了common.loader，其他兩個不配置，為空值。
     private ClassLoader createClassLoader(String name, ClassLoader parent)
         throws Exception {
 
@@ -180,11 +180,11 @@ public final class Bootstrap {
         if ((value == null) || (value.equals("")))
             return parent;
 
-        value = replace(value); //替换其中的环境变量，如${catalina.base}、${catalina.home}
+        value = replace(value); //替換其中的環境變亮，如${catalina.base}、${catalina.home}
 
         List<Repository> repositories = new ArrayList<>();
 
-        //value的值中还是有双引号的，如: 
+        //value的值中還是有雙引號的，如: 
         //"E:\tomcat\launch/lib","E:\tomcat\launch/lib/*.jar","E:\tomcat\launch/lib","E:\tomcat\launch/lib/*.jar"
         //其中E:\tomcat\launch是${catalina.base}的值
         //而字段PATH_PATTERN = Pattern.compile("(\".*?\")|(([^,])*)")中的(\".*?\")也有双引号
